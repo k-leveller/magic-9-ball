@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_05_040454) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_13_152723) do
+  create_table "players", force: :cascade do |t|
+    t.integer "skill_level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
